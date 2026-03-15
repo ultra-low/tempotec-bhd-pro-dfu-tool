@@ -6,7 +6,7 @@
 
 The official TempoTec DFU Tool for the Sonata BHD Pro has stopped launching on recent Windows installations. The tool is used to configure DAC filter, volume table, NOS mode, phase compensation, harmonic and IEQ filter settings. It exits silently without showing any UI, which makes it difficult to diagnose without digging into Windows Event Viewer.
 
-This repository has patched versions of the tool that resolve the issue.
+This repository has patched versions of the tool that resolve the issue. Note that 128MB of development log files that were included in the original Tempotec distribution have been removed from both archives, reducing each download to around 1MB. No other files were removed or modified beyond the patches described below.
 
 ---
 
@@ -18,10 +18,10 @@ After checking Windows Event Viewer and decompiling the tool with dnSpy, the cau
 
 ## The Two Patched Versions
 
-### TempoTec_DFU_Tool_patched.7z
+### TempoTec_DFU_Tool_Patched.7z
 This version patches the HttpClient constructor to skip SSL certificate validation. It still connects to HiBy's server on launch, so it will work as long as the server stays online. Useful if you want the tool to pick up any future server side changes.
 
-### TempoTec_DFU_Tool_offline.7z (Recommended)
+### TempoTec_DFU_Tool_Offline.7z (Recommended)
 This version replaces the server call entirely with a hardcoded local copy of the BHD Pro's feature configuration JSON, which was captured directly from HiBy's server before it became unreachable. It launches instantly with no network dependency and will keep working permanently regardless of what happens to HiBy's infrastructure. This is the version most people will want.
 
 ---
