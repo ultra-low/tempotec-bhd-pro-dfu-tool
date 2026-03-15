@@ -4,7 +4,7 @@
 
 ## Overview
 
-The official TempoTec DFU Tool for the Sonata BHD Pro has stopped launching on recent Windows installations. The tool is used to configure DAC filter, volume table, NOS mode, phase compensation, harmonic and IEQ filter settings. It exits silently without showing any UI, which makes it difficult to diagnose without digging into Windows Event Viewer.
+The official TempoTec DFU Tool for the Sonata BHD Pro has stopped launching on recent Windows installations. The tool is used to configure DAC filter, volume table, NOS mode, phase compensation, harmonic and IIR filter settings. It exits silently without showing any UI, which makes it difficult to diagnose without digging into Windows Event Viewer.
 
 This repository has patched versions of the tool that resolve the issue. Note that 128MB of development log files that were included in the original Tempotec distribution have been removed from both archives, reducing each download to around 1MB. No other files were removed or modified beyond the patches described below.
 
